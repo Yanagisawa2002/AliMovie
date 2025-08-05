@@ -1,5 +1,7 @@
 # 基于Transformer的冷启动推荐系统
 
+![Results](evaluation_results.png)
+
 ## 项目概述
 
 本项目实现了一个基于Transformer架构的冷启动推荐系统，参考阿里巴巴GPSD（生成式预训练 + 微调）框架。系统专门针对长尾用户（交互次数 < 5）进行优化，通过两阶段训练策略提升推荐效果。
