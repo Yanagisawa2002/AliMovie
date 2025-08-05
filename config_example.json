@@ -1,0 +1,99 @@
+{
+  "_comment": "基于Transformer的冷启动推荐系统配置文件示例",
+  
+  "model_config": {
+    "d_model": 256,
+    "n_heads": 8,
+    "n_layers": 6,
+    "d_ff": 1024,
+    "max_seq_len": 50,
+    "dropout": 0.1
+  },
+  
+  "training_config": {
+    "pretrain_epochs": 1,
+    "finetune_epochs": 2,
+    "batch_size": 64,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.00001,
+    "early_stopping_patience": 3
+  },
+  
+  "data_config": {
+    "long_tail_threshold": 5,
+    "pretrain_sample_frac": 0.1,
+    "train_ratio": 0.8,
+    "data_path": "./data/"
+  },
+  
+  "evaluation_config": {
+    "k_values": [5, 10, 20],
+    "baseline_gmv": 1000000.0,
+    "expected_improvement": 7.97
+  },
+  
+  "system_config": {
+    "device": "auto",
+    "seed": 42,
+    "model_path": "./models/",
+    "results_path": "./results/",
+    "logs_path": "./logs/"
+  },
+  
+  "presets": {
+    "_comment": "预设配置，可以快速切换不同的实验设置",
+    
+    "quick_demo": {
+      "model_config": {
+        "d_model": 128,
+        "n_heads": 4,
+        "n_layers": 3,
+        "d_ff": 256,
+        "max_seq_len": 20
+      },
+      "training_config": {
+        "pretrain_epochs": 1,
+        "finetune_epochs": 1,
+        "batch_size": 32
+      },
+      "data_config": {
+        "pretrain_sample_frac": 0.05
+      }
+    },
+    
+    "large_model": {
+      "model_config": {
+        "d_model": 512,
+        "n_heads": 16,
+        "n_layers": 12,
+        "d_ff": 2048,
+        "max_seq_len": 100
+      },
+      "training_config": {
+        "pretrain_epochs": 3,
+        "finetune_epochs": 5,
+        "batch_size": 32,
+        "learning_rate": 0.00005
+      }
+    },
+    
+    "production": {
+      "model_config": {
+        "d_model": 384,
+        "n_heads": 12,
+        "n_layers": 8,
+        "d_ff": 1536,
+        "max_seq_len": 80
+      },
+      "training_config": {
+        "pretrain_epochs": 2,
+        "finetune_epochs": 3,
+        "batch_size": 128,
+        "learning_rate": 0.0001
+      },
+      "data_config": {
+        "pretrain_sample_frac": 0.2
+      }
+    }
+  }
+}
