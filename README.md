@@ -276,32 +276,6 @@ python main.py --pretrain_sample_frac 0.05
 - A/B testing framework
 - Recommendation explainability
 
-## References
-
-1. Vaswani et al. "Attention Is All You Need" (2017)
-2. Alibaba GPSD Framework Paper
-3. MovieLens Dataset Documentation
-4. Recommendation System Evaluation Metrics Standards
-
-## License
-
-MIT License
-
-## Contribution Guidelines
-
-Welcome to submit Issues and Pull Requests!
-
-1. Fork the project
-2. Create feature branch
-3. Commit changes
-4. Submit Pull Request
-
-## Contact
-
-If you have any questions, please contact us through:
-- Submit GitHub Issue
-- Email: [your-email]
-
 ## 📁 Project Structure
 
 ```
@@ -324,21 +298,5 @@ AliMovie/
 └── models/                 # Model save directory
     └── README.md          # Model description
 ```
-
-## 🤝 Contribution Guidelines
-
-Welcome to submit Issues and Pull Requests!
-
-1. Fork this project
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
+、
 **Happy Recommending! 🚀**
